@@ -1,0 +1,108 @@
+LEER - INDICACIONES PARA ACTUALIZAR PÁGINA IFTS 4 
+REQUERIMIENTOS N° 2
+
+GRUPO 3:
+- IBARROLA, CAROLINA
+- ORTIZ, SOLEDAD
+- TORRES, MAXIMILIANO
+- VERGINI, STEFANIA
+-----------------------------BASE DE DATOS----------------------------------
+
+Se compartirá la base de datos con una Tabla Nueva 'archivos_pdf'
+
+Sin embargo, compartimos el código y se puede ejecutar directamente,
+para no generar ningún tipo de incoveniente.
+
+CREATE TABLE archivos_pdf (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    ruta_archivo VARCHAR(255) NOT NULL,
+    usuario_id INT NOT NULL,
+    fecha_subida TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
+);
+
+
+También los INSERTS de la tabla, que se encuentran dentro del proyecto,
+en la carpeta 'pdf':
+
+INSERT INTO `archivos_pdf` (`id`, `titulo`, `ruta_archivo`, `usuario_id`, `fecha_subida`) VALUES
+(1, 'horario-a-s-nuevo', '../pdf/horarios-sistemas-nuevo-plan-Agosto-2024.pdf', 124, '2024-10-25 23:04:01'),
+(2, 'horario-a-s-viejo', '../pdf/horarios-sistemas-plan-viejo-agosto-2024.pdf', 124, '2024-10-25 23:04:54'),
+(3, 'horario-d-s', '../pdf/horarios-software-agosto-2024.pdf', 124, '2024-10-25 23:05:01'),
+(4, 'FORMULARIO DE INSCRIPCION FINALES', '../pdf/Formulario_de_Inscripcion_a_Finales_error_Siu.pdf', 124, '2024-10-25 23:05:02');
+
+
+-------------------------------CARPETA ADMIN--------------------------------------
+
+Dentro de 'navegacion_admin.php'
+
+Agregar las siguientes Líneas
+
+Linea N° 62
+<li><a href="./horarios_cursada_admin.php">* Horarios de cursada</a></li>
+
+Linea N° 65
+<li><a href="./examFinal.php">* Inscripcion a Finales (Error en SIU)</a></li>
+
+-----ARCHIVOS A DESCARGAR DENTRO DE LA CARPETA ADMIN------
+
+- examFinal.php
+- examFinal_upload.php
+- examFinal_delete.php
+- horarios_cursada_admin.php
+
+-------------------------------CARPETA CSS--------------------------------------
+
+-----ARCHIVO A DESCARGAR DENTRO DE LA CARPETA CSS------
+
+- horarios.css
+
+-------------------------------CARPETA JS--------------------------------------
+
+-----ARCHIVO A DESCARGAR DENTRO DE LA CARPETA JS------
+
+- confirms_alerts.js
+
+-------------------------------CARPETA PDF--------------------------------------
+
+-----ARCHIVOS A DESCARGAR DENTRO DE LA CARPETA PDF------
+
+- Formulario_de_Inscripcion_a_Finales_error_Siu.pdf
+- horarios-sistemas-nuevo-plan-Agosto-2024.pdf
+- horarios-sistemas-plan-viejo-Agosto-2024.pdf
+- horarios-software-agosto-2024.pdf
+
+-------------------------------CARPETA PRINCIPAL--------------------------------------
+
+Dentro de 'navegacion.php'
+
+Agregar las siguientes Líneas
+
+Lineas desde la 58 hasta la 65 (inclusive)
+              <li><a href="carreras.php">* Técnico Superior en Análisis de Sistemas (Plan Nuevo)</a> 
+              <ul class="submenuB">
+                <li><a target='blank' href="/pdf/ResolucionAS.pdf">-Plan de estudios</a></li>
+                <li><a href="carreras.php">-Régimen de correlativas</a></li>
+                <li><a href="carreras.php">-Información sobre equivalencias</a></li>
+                <li><a target = "blank" href="mostrar_pdf.php?titulo=horario-a-s-nuevo" name="horario-a-s-nuevo">- Horarios de cursada</a></li>
+              </ul>
+              </li>
+
+Linea N° 70
+              <li><a href="/php/2c2024-main/horarios_cursada.php">* Horarios de cursada</a></li>
+
+Linea N° 73
+              <li><a href="./formulario_inscripcion.php">* Formulario de inscripción a exámenes - Error SIU</a></li>
+
+
+-----ARCHIVOS A DESCARGAR DENTRO DE LA CARPETA 2c2024-main------
+
+- horarios_cursada.php
+- mostrar_pdf.php
+- formulario_inscripcion.php
+
+----------------------------------------------------------------------------------
+
+¡¡¡Desde ya muchas gracias por permitirnos colaborar con este proyecto,
+			Nos llena de Alegría!!!

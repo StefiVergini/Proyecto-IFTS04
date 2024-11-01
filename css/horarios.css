@@ -1,0 +1,209 @@
+
+.contenedor-recuadro {
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    
+}
+.contenedor-recuadro .recuadro {
+    width: 32%;
+    position: relative;
+    height: 400px;
+    margin-bottom: 5px;
+    padding: 2rem;
+    box-shadow: 4px 4px 2px 2px rgba(0, 0, 0, 0.75);
+    border: 2px initial #000000;
+    text-align: center;
+
+}
+.contenedor-recuadro .recuadro-e {
+    width: 45%;
+    position:relative;
+    height: 300px;
+    margin-top: 15px;
+    padding: 2rem;
+    box-shadow: 4px 4px 2px 2px rgba(0, 0, 0, 0.75);
+    border: 2px initial #000000;
+    text-align: center;
+
+}
+
+@media screen and (max-width:1000px) {
+    .contenedor-recuadro {
+        width: 95%;
+    }
+}
+@media screen and (max-width:700px) {
+    .contenedor-recuadro {
+        width: 90%;
+        justify-content:center;
+    }
+    .contenedor-recuadro .recuadro{
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    .contenedor-recuadro .recuadro-e {
+        width: 80%; 
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width:450px) {
+    h1 {
+        font-size: 22px;
+    }
+    .contenedor-recuadro{
+        width: 98%;
+        justify-content:center;
+        
+    }
+    .contenedor-recuadro .recuadro {
+        width: 100%;
+        margin-bottom: 10px;
+        
+    }
+    .contenedor-recuadro .recuadro-e {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+.div-titulos {
+    display: flex;
+    flex-direction: column;
+    height: 3.75em;
+    max-width: 90%;
+    background-color: #5B6068;
+    border-radius: 3px;
+    justify-content: center;
+    text-align: center;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.div-titulos.centro {
+    align-items: center;
+}
+.input-y-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: black;
+}
+.label-estilo{
+    background-color: #e5e5e5a9;
+    padding: 0em 2.5em 0em;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+input::file-selector-button {
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+    background-color: #5488a3;
+    padding: 0.5em;
+    border: 2px initial grey;
+    border-radius: 3px;
+    box-shadow: inset;
+    min-width: 150px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .input-estilo:hover {
+    background-color: #446b82;
+}
+  
+@media (max-width: 600px) {
+    .label-estilo, .input-y-label, .input-estilo {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.clase-links{
+    display: inline-block;
+    color: #fff;
+    text-align: justify;
+    font-size: 14px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight:bolder;
+    background-color: #5488a3;
+    color: inherit;
+    cursor: pointer;
+    border: 2px outset #0608a2;
+    border-radius: 25px;
+    padding: 1em 1em 1em;
+    transition: all .1s ease;
+    animation: aparecer1 2s ease 1 backwards;
+}
+.clase-links:hover{
+    background-color: #5488a3;
+    border: 4px outset #07eafa;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+.clase-links .a-link{
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    margin-bottom: 15px;
+    
+}
+
+
+
+@media (min-width: 1280px) {
+    .clase-links {
+        flex: 0 0 auto;
+    }
+    .clase-links .a-link{
+       padding: 20px 50px;
+    }
+}
+
+@media screen and (max-width:1279px) {
+    .clase-links .a-link{
+       padding: 5px 10px;
+    }
+}
+.a-link-public{
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight:bolder;
+    background-color: #e8b17d7e;
+    color: inherit;
+    cursor: pointer;
+    border: 2px outset #777b8230;
+    border-radius: 25px;
+    padding: 10em 4em 9em;
+    transition: all .1s ease;
+    animation: aparecer1 2s ease 1 backwards;
+    /*margin: auto;*/
+    
+}
+.a-link-public:hover{
+    background-color: #e8b07ddd;
+    border: 4px outset #eeeeeeaf;
+    text-transform: uppercase;
+}
+.p-notfound{
+    font-size: 20px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight:bolder;
+    border-radius: 3px;
+    border: 2px outset #0608a2;
+}
